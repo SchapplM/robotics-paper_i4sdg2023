@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="121.68381mm"
+   height="72mm"
+   viewBox="0 0 121.68381 72"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="workspaces.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.0460067"
+     inkscape:cx="261.24059"
+     inkscape:cy="163.4892"
+     inkscape:window-width="2560"
+     inkscape:window-height="1361"
+     inkscape:window-x="1911"
+     inkscape:window-y="455"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.1441166,35.706638)">
+    <image
+       width="37.645"
+       height="35.849594"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_10.png"
+       id="image878"
+       x="42.163521"
+       y="-0.6342923" />
+    <image
+       width="37.645"
+       height="35.849594"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_20.png"
+       id="image854"
+       x="84.182922"
+       y="-0.6342923" />
+    <image
+       width="37.645"
+       height="35.849594"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_0.png"
+       id="image866"
+       x="0.1441166"
+       y="-0.6342923" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="1.8288176"
+       y="35.06731"
+       id="text9338"><tspan
+         sodipodi:role="line"
+         id="tspan9336"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;font-family:times;-inkscape-font-specification:'times Bold';stroke-width:0.264583"
+         x="1.8288176"
+         y="35.06731">(a)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="43.87698"
+       y="35.06731"
+       id="text9338-0"><tspan
+         sodipodi:role="line"
+         id="tspan9336-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;font-family:times;-inkscape-font-specification:'times Bold';stroke-width:0.264583"
+         x="43.87698"
+         y="35.06731">(b)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.52777px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="85.490852"
+       y="35.190887"
+       id="text9338-0-5"><tspan
+         sodipodi:role="line"
+         id="tspan9336-1-9"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;font-family:times;-inkscape-font-specification:'times Bold';stroke-width:0.264583"
+         x="85.490852"
+         y="35.190887">(c)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 25.216804,4.7298162 33.234455,3.048696"
+       id="path863" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 65.16837,10.19387 73.330076,3.403905"
+       id="path863-8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 59.851085,18.628476 71.505451,15.015074"
+       id="path863-8-2" />
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="40.728275"
+       y="2.2727945"
+       id="text5839"><tspan
+         sodipodi:role="line"
+         id="tspan5837"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="40.728275"
+         y="2.2727945">installation</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="40.728275"
+         y="5.0950146"
+         id="tspan5841">space</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="80.287468"
+       y="1.5672392"
+       id="text5839-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="80.287468"
+         y="1.5672392"
+         id="tspan41525">optimal </tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="80.287468"
+         y="4.3894591"
+         id="tspan41531">spherical</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="80.287468"
+         y="7.2116795"
+         id="tspan41533">joints</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="80.287468"
+         y="10.033899"
+         id="tspan12151" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82222px;line-height:1;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';stroke-width:0.264583"
+       x="78.479858"
+       y="11.520497"
+       id="text5839-2-0"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="78.479858"
+         y="11.520497"
+         id="tspan41525-5">real</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="78.479858"
+         y="14.342717"
+         id="tspan41531-8">spherical</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="78.479858"
+         y="17.164938"
+         id="tspan41533-1">joints</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:2.82222px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="78.479858"
+         y="19.987158"
+         id="tspan12151-4" /></text>
+    <image
+       width="35.144035"
+       height="35.029312"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_0_draufsicht.png"
+       id="image1271"
+       x="2.6450818"
+       y="-35.663605" />
+    <image
+       width="35.144035"
+       height="35.029312"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_10_draufsicht.png"
+       id="image1283"
+       x="44.767269"
+       y="-35.846485" />
+    <image
+       width="35.144035"
+       height="35.029312"
+       preserveAspectRatio="none"
+       xlink:href="workspace/workspace_tilt_ee_deg_20_draufsicht.png"
+       id="image1259"
+       x="86.681488"
+       y="-35.846485" />
+  </g>
+</svg>

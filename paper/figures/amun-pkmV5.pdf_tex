@@ -1,0 +1,73 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'amun-pkmV5.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{514.78133792bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.42474783)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{amun-pkmV5.pdf}}%
+    \put(0.77175929,0.04847918){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}spherical joint\end{tabular}}}}%
+    \put(0.2396472,0.41125988){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}elbow\end{tabular}}}}%
+    \put(0.47084264,0.36176303){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}universal\\joint\end{tabular}}}}%
+    \put(0.13304186,0.05557047){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}multi-piece\\base plate\end{tabular}}}}%
+    \put(0.07208995,0.330507){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}drives with\\gear unit\end{tabular}}}}%
+    \put(0.91156817,0.36442981){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}crank\end{tabular}}}}%
+    \put(0.94392418,0.2950251){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}adapter\\part\end{tabular}}}}%
+    \put(0.60964477,0.19254427){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\varphi_z$\end{tabular}}}}%
+    \put(0.40882402,0.045415){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}end-effector\\platform\end{tabular}}}}%
+    \put(0.04466104,0.39904113){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(\textbf{a})\end{tabular}}}}%
+    \put(0.74844504,0.24088838){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}63.7°\end{tabular}}}}%
+    \put(0.5234147,0.39813977){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(\textbf{b})\end{tabular}}}}%
+    \put(0.51881677,0.18342109){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(\textbf{c})\end{tabular}}}}%
+    \put(0.85634937,0.39813977){\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}(\textbf{d})\end{tabular}}}}%
+    \put(0.54946254,0.2406548){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}38°\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

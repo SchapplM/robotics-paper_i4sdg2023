@@ -1,0 +1,22 @@
+% Return the directory of the dimensional synthesis' results
+% This file has to be adapted by the user and saved without the .template extension
+
+% Moritz Schappler, moritz.schappler@imes.uni-hannover.de, 2022-12
+% (C) Institut für Mechatronische Systeme, Leibniz Universität Hannover
+
+function datadir = i4sdg2023_dimsynth_data_dir()
+%% Option 1: Stored result from the paper repository
+% repopath = fileparts(which('i4sdg2023_dimsynth_data_dir.m'));
+% datadir = fullfile(repopath, 'data', 'synthesis');
+%% Option 2: Results directory from the synthesis toolbox
+% dimsynthpath = fileparts(which('structgeomsynth_path_init.m'));
+% datadir = fullfile(dimsynthpath, 'results');
+%% Option 3: Other storage such as project network share (path has to be
+% adapted depending on Linux/Windows computers
+% Linux:
+% datadir = ['/home/moritz/SeaDrive/Für mich freigegeben/imes-projekt-', ...
+%   'bmel-amun\03_Entwicklung\Struktursynthese\Kinematik_v1'];
+% Windows:
+  datadir = ['C:\Users\Schappler_Moritz\seadrive_root\Moritz S', ...
+    '\Für mich freigegeben\imes-projekt-bmel-amun\03_Entwicklung\Struktursynthese\Kinematik_v1'];
+end
