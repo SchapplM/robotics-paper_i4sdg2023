@@ -1,7 +1,7 @@
 % !TEX encoding = UTF-8 Unicode
 % !TEX spellcheck = en_US
 
-\documentclass[runningheads]{llncs}
+\documentclass[runningheads,hidelinks]{llncs}
 %
 %%% packages
 \usepackage{paralist}
@@ -52,32 +52,15 @@
 % \renewcommand\UrlFont{\color{blue}\rmfamily}
 \begin{document}
 %
-% \title{Contribution Title}
-% ----- Titelvarianten
-%\title{Task-Adapted Synthesis and Design of a 6-DoF Parallel Robot for Weed Control}
-% \title{Combined Structural and Dimensional Synthesis and Design of a 6-DoF Parallel Robot\\ for Weed Control}
 \title{Task-Specific Synthesis and Design of a mobile six-DoF Hexa Parallel Robot for Weed Control}
-% keywords:
-% synthesis, parallel robot, 6DoF, weed control
-%------
 
 \titlerunning{Synthesis and Design of a six-DoF Parallel Robot for Weed Control}
-% If the paper title is too long for the running head, you can set
-% an abbreviated paper title here
-%
-
-% \author{Tim Sterneck\inst{1}\orcidID{0000-0003-1649-9371} \and 
-% Jannik Fettin\inst{1}\orcidID{0000-0002-3544-2437} \and
-% Moritz Schappler\inst{1}\orcidID{0000-0001-7952-7363} }
 
 \author{Tim Sterneck\inst{1}\orcidlink{0000-0003-1649-9371} \and 
 Jannik Fettin\inst{1}\orcidlink{0000-0002-3544-2437} \and
 Moritz Schappler\inst{1}\orcidlink{0000-0001-7952-7363} }
 %
 \authorrunning{T. Sterneck et al.}
-% First names are abbreviated in the running head.
-% If there are more than two authors, 'et al.' is used.
-%
 \institute{Institute of Mechatronic Systems, Leibniz University of Hannover, Germany\\
 \email{\{firstname.lastname\}@imes.uni-hannover.de}}
 %
@@ -92,17 +75,11 @@ The development of a kinematic structure under task-specific requirements is don
 %
 %%%%%%%%%%%%%%
 \section{Introduction and State of the Art}
-%Introduction with reference to: \\
-%Sustainable Goals:\\
-%- SDG6 (Clean Water and Sanitation): avoidance of herbicides and pollution %of (ground) water\\
-%- SDG11 (sustainable cities and communities): sustainable agriculture as %element in sustainable communities\\
-%- SDG12 (responsible consumption and production): food has big part in the %consumption and production of civilizations \\
-%\\
 \begin{wrapfigure}{r}{0.3\textwidth}
     \centering
 	\vspace{-8mm}
 	\includegraphics[width=1.0\linewidth]{weeding_system.pdf}
-	\caption{Scheme of the presented weeding system}
+	\caption{Simplified scheme of the presented weeding system (rear view)}
 	\label{fig:application_scenario}
 	\vspace{-7mm}
 \end{wrapfigure}
@@ -113,121 +90,34 @@ Using automated robotic systems is a promising alternative since manual weeding 
 In this paper, we are focusing on the kinematic aspect of robotics for tool handling rather than on the topic of mobile robots e.g. carrying the weeding tools, as shown in Fig~\ref{fig:application_scenario}. 
 In the following, we refer to this as parallel kinematic machine (PKM).
 
-% 
-%%%% Notizen
-% - need for weed control due to economic efficiency\\
-% - high importance especially in the early growth stage\\
-% - currently the preferred approach for weed control is still the usage of herbicides\\
-% - sales volume remains at a high level in recent years\\
-% % Absatz DE: https://de.statista.com/statistik/daten/studie/154717/umfrage/entwicklung-des-absatzes-von-herbiziden-in-deutschland/
-% %
-% - cheap, easy and fast application\\
-% - downsides: \\
-%     * non selective usage, mostly overdosage -> low efficiency\\
-%     * unclear/controversial effects (of herbicides and herbicide degradation products) on human and animal health\\
-%     * infiltration into water bodies and groundwater\\
-%     * processes involved in the movement of pesticides: Metabolism in the crop, wind erosion of treated soil, vapour drift, chemical and microbial degradation in water/soil, rainfall washout, leaching and preferential flow \cite{Martin2016}\\
-% - avoidance of herbicides preserves health of water bodies and eliminates remaining human health risk\\
-%- mechanical weed removal, which is necessary at the advanced stage of growth is possible through expensive manual work\\
-% - using automated robotic systems is promising also in terms of cost to compete with the use of herbicides.\\
-% - here we are focusing on robotics in sense of kinematics for moving tools, not on the topic of mobile robotics\\
-% - focusing on parallel robotics, due to pick-and-place-like task\\
-% - Since not all mechanical methods for weed removal are 3T0R tasks and can be solved with common kinematics (such as the Delta robot), a crucial part of the development is synthesis in the sense of finding the best structure and kinematic parameters\\
-% - requires 3T2R task\\
-%     * accessibility of the plant roots\\
-%
-
-% \subsection*{Related Works}     % Abschnitt nur zur Strukturierung der Notizen
 Weeding robots can be categorized according to the operating principle of the weeding tool (mechanical, chemical, electric discharge, laser irradiation, water jet treatment), and accordingly different requirements exist for tool handling.%manipulating the tool. 
 
-%%%% Systeme ohne aktive Werkzeugpositionierung
 In numerous applications, the movement of the carrier system is used, so no further kinematics is required for tool positioning. 
 The ``Ecorobotix ARA'' \cite{Ecorobotix} uses a large array of individually controllable nozzles to fine-dose herbicides, a similar principle is applied in \cite{Utstumo2018}. 
 There are also systems for weed removal by laser irradiation, as in the ``Carbon Robotics LaserWeeder'' \cite{CarbonRobotics}, which works without an additional tool positioning. 
 \cite{Zhang2022} shows more examples of mechanical weeding, both with rotating tools, and completely passive. 
-% - Ecorobotix \cite{Ecorobotix}\\
-%     * chemical processing\\
-%     * no tool handling kinematic, row of individually controllable nozzles\\
-%     * delta kinematics used in an earlier version\\
-% - Carbon Robotics LaserWeeder \cite{CarbonRobotics}\\
-%     * laser modules\\
-%     * no tool handling kinematic\\
-% % Quellen auch im Review Zhang
-% - Tertill robotic weeder \cite{Sanchez2021}
-%     * desingned for home gardeners\\
-%     * mechanical weed whacker tool\\
-%     * no tool handling kinematic,  positioning by mobile robot itself\\
-% - \cite{Sori2018}\\
-%     * mechanical rot. tool\\
-%     * no tool handling kinematic\\
-% - \cite{Uchida2019}\\
-%     * mechanical, passiv\\
-%     * no tool handling\\
-% - \cite{Utstumo2018}\\
-%     * spray system\\
-%     * nozzle array, no tool handling kinematic\\
-    
-%%%% Systeme mit 1-2dof Werkzeugpositionierung
+
 Selective weeding using mechanical tools requires at least one degree of freedom (DoF) for tool positioning. 
 ``Bonirob'', a multifunctional mobile agriculture robot introduced in \cite{Ruckelshausen2009} was used for weeding with fixed nozzles and additional linear actuated stamps. 
 Other systems with one-DoF tool positioning include the ``Naio Technologies OZ'' \cite{NaioTechnologies} with various tools, the ``Carre Aggriculture Anatis'' \cite{CarbonRobotics} and the ``Farmdroid'' \cite{Farmdroid}, both with one-DoF digging tools. 
 In the Farming Revolution ``Farming GT'' \cite{farming_revolution} the rotating tool is guided by two-DoF serial kinematics. 
 Further applications with mechanical tools, lasers or water jets can be found in \cite{Zhang2022}, containing only serial kinematics. 
-% - Bonirob, introduced in \cite{Ruckelshausen2009}\\
-%     * multifunctional mobile robot\\
-%     * spraying tools and lin. stamp were used (1 dof linear tool handling)\\
-% - oz (naio technologies) \cite{NaioTechnologies}\\
-%     * mechanical weeding, multiple tools\\
-%     * 1 dof tool handling (vertical)\\
-% - Farming GT (Farming revolution) \cite{farming_revolution}\\
-%     * mechanincal, rot. tool\\
-%     * 2 dof serial tool handling kinematics\\
-% - Anatis (Carre agriculture) \cite{CARRE}\\
-%     * mechanical weeding\\
-%     * 1 dof tool handling (vertical)\\
-% - FarmDroid \cite{Farmdroid}\\
-%     * mechanical weeding\\
-%     * 1 dof tool handling (horizontal)\\
-% % Quellen auch im Review Zhang
-% - \cite{Bawden2017}\\
-%     * mechanical and water spray system combined\\
-%     * 1 and 2 DoF serial, linear kinematics\\
-% - \cite{Xiong2017}\\
-%     * laser\\
-%     * 2dof serial gimbal kinematics\\
 
 
-%%% Systeme mit >2dof Werkzeugpositionierung
 Systems with tool handling kinematics of three or more DoF can be used for single-plant-based application. 
 Providing high dynamics and a proven design, Delta robots are used in several weeding systems for tool handling, e.g. in the prototype of ``Small Robot Company'' \cite{SmallRobotCompany24-01-2023} with a linear Delta and an electrode, and by Ecorobotix \cite{Ecorobotix} with Delta robots for positioning nozzles in an earlier version. 
 Serial kinematics, as in the SwagBot \cite{Eiffert2021}, where a six-DoF robotic arm positions a nozzle, are barely represented and not promising for an efficient application. 
 In \cite{Blasco2002} a six-DoF parallel robot, the \textsc{Hexa} introduced in \cite{Pierrot1991}, was used, but primarily for positioning the camera system rather than the weeding tool. 
-% - Small robot company \cite{SmallRobotCompany24.01.2023}\\
-%     * prototype, electrical weeding\\
-%     * 3 dof tool handling, linear delta robot\\
-% - Ecorobotix\\
-%     * chemical processing\\
-%     * delta kinematics used in an earlier version\\
-% - \cite{Blasco2002}\\
-%     * electrical weeding\\
-%     * 6dof hexa kinematics\\
 Further applications for all types of tool handling can be found in the reviews~\cite{Zhang2022,Fountas2020,Oliveira2021}. 
 
 Unlike the references above, we pursue the idea of a six-DoF parallel robot which is able to provide \emph{spatial orientation} of the \emph{rotating tool} prototype to be tested, which opens more possibilities for weed control.
 This is similar to industrial machining tasks, where the task DoF can be termed as 3T2R, i.e. three translations and two rotations are defined.
 % Since not all mechanical methods for weed control can be handled by existing robot designs, 
 The crucial part of the development of such a weeding robot is the kinematic synthesis. % in the sense of finding the best structure and kinematic parameters. 
-\emph{Combined structural and dimensional synthesis} is a suitable method for this purpose especially for parallel robots, introduced in \cite{Krefft2006} also at the example of a \textsc{Hexa} robot. 
+\emph{Combined structural and dimensional synthesis} is a suitable method for this purpose especially for parallel robots, introduced in \cite{Krefft2006} also at the example of a \textsc{Hexa} robot and does not suffer from the restriction to very few proven common structures. 
 % However, this procedure is not described for the development of robots for handling weeding tools yet. 
 % Since the desired spatial orientation of our rotating tool presents a 3T2R task, 
 Using this method, we present the development of parallel robot  with the following \emph{contributions}:
-% Hexa-Literatur\\
-% - \cite{Krefft2006}: Optimierung vom BS-Hexa\\
-% - ggf. BS-Gruppe\\
-% - combined structural and dimensional synthesis for PKM, introduced by \cite{Krefft2006}\todo{knapp!}\\
-% * bisher nicht in Literatur zu weeding robots zu finden \\
-% \subsection*{Contribution}     % Abschnitt nur zur Strukturierung der Notizen
-% Our \textbf{contributions} are:
 \begin{compactitem}
     \item the transfer of technical requirements for a given weeding process into an optimization problem within the combined synthesis framework,
     \item the development of a six-DoF parallel robot prototype for weeding application, which is a new realization of the \textsc{Hexa} robot by its assembly mode and dimensioning. 
@@ -247,15 +137,6 @@ The design is discussed in Sec.~\ref{sec:design} followed by a workspace evaluat
 % \subsection{Application}
 Our focus is on the organic cultivation of onion crops, as their profitability suffers particularly from weeds. 
 The crops are seeded in flat beds, grouped in four evenly spaced rows between the tractor driving lanes as sketched in Fig.~\ref{fig:application_scenario}. The single-plant-based weeding aims at a narrow band of \SI{60}{\milli\metre} around the seed rows (\emph{intra-row}), since this is most vulnerable and more rough methods are used at more distant areas, referred to as \emph{inter-row} methods. 
-% Als Teaser-Bild
-% \begin{figure}[tb] 
-% 	\centering
-% 	\vspace{-5mm}
-% 	\includegraphics[width=1.0\linewidth]{fig_platzhalter.pdf}
-% 	\caption{Scenario of onion cultivation (a), detected plants and weeds (b) and the milling tool (c) \TODO{figure verzichtbar?}}
-% 	\label{fig:application_scenario}
-% 	\vspace{-5mm}
-% \end{figure}
 %
 The overall system consist of a mobile robot carrying a PKM and a camera system. 
 % In the following we will use ``robot'' in terms of the handling kinematic and will not discuss the carrier system any further. 
@@ -269,7 +150,7 @@ For accessibility and promising advantages in treatment, full tilting of the too
 Further requirements have to be taken into account within the synthesis:
 \begin{compactitem}
     \item min. workspace in $y$-direction $\pm$\SI{190}{\mm} (including vehicle deviation)%(band around seed rows: $\pm$\SI{60}{\mm}, deviation of the vehicle: $\pm$\SI{100}{\mm}, safety factor: 20\%)
-    \item min. workspace in vertical direction of \SI{340}{\mm}% (ability to move across crops up to \SI{100}{\mm} growth height, max. tool depth into ground: \SI{30}{\mm}, max. height variation: \SI{150}{\mm}, safety factor: 20\%)
+    \item min. workspace in vertical direction of \SI{340}{\mm} (jumping crops possible)% (ability to move across crops up to \SI{100}{\mm} growth height, max. tool depth into ground: \SI{30}{\mm}, max. height variation: \SI{150}{\mm}, safety factor: 20\%)
     \item installation space: two parallel robots are placed next to each other (in $y$-direction) with centers \SI{1000}{\milli\metre} apart from each other, which is the distance of the outer seed rows. Reduced by a safety distance of \SI{100}{\milli\metre}. No vertical limit
     \item driving speed of vehicle (\SI{1}{\km\per\hour}) and a density of four plants per meter, which has to be provided by the acceleration and speed of the end effector%: maximum velocities and accelerations
     \item min. diameter of mobile platform due to the tool mounting of \SI{42}{\mm}
@@ -278,48 +159,10 @@ Further requirements have to be taken into account within the synthesis:
     \item mobile platform DoF: 3T3R (unrestricted research on weeding process, redundant DoF can be used to optimize trajectories and avoiding singularities)
     \item position accuracy: \SI{0.5}{\mm}
 \end{compactitem}
-% - description of requirements that affect kinematic structure\\
-%     * workspace (x-y plane):\\
-%         ** width of the workspace area around seed rows: $\pm$ \SI{60}{\mm}\\
-%         ** deviation of the tractor vehicle: $\pm$ \SI{100}{\mm}\\
-%         ** safety factor: 20\%\\
-%         ** total: $\pm$ \SI{190}{\mm}\\
-%     * workspace (vertical): \\
-%         ** total: \SI{340}{\mm}\\
-%         ** ability to move across crops up to \SI{100}{\mm} growth height\\
-%         ** maximum tool depth in the ground: \SI{30}{\mm}\\
-%         ** maximum height difference between driving lanes and bed: \SI{150}{\mm}\\
-%         ** safety factor: 20\%\\
-%     * construction space: two PR must be next to each other with a spacing of 1000mm, which is the spacing of the outer seed rows. No vertical limit due to the hanging mounting.\\
-%     * driving speed of tractor (\SI{1}{\km\per\hour}): maximum velocities and accelerations\\
-%     * minimal diameter of mobile platform due to the tool mounting dimensions: \SI{42}{\mm}\\
-%     * total mass of the mounted tool: \SI{1.5}{\kg}\\
-%     * minimum tilt angle of mobile platform (accessibility of the plant roots): \SI{15}{\degree}\\
-%     * mobile platform dofs: 3T3R (unrestricted research on weeding process, redundant DoF can be used to optimize trajectories and avoiding singularities)\\
-%     * positional accuracy: \SI{0.5}{\mm}\\
-% \\
-% figures:\\
-% - sketch of the bed\\
-% - camera image with labeled plants\\
-% - tool?\\
-%
-%
-% These requirements are then translated in the synthesis framework.
 \vspace{1mm}
 In the following, these requirements are translated into the synthesis framework. 
 %%%%%%%%%%%%%%%%%%%%%
 \section{Synthesis}\label{sec:synthesis}
-% ----Combined Structural and Dimensional Optimization Scheme
-%---- mathematical description of the requirements
-% \begin{figure}[tb] 
-% 	\centering
-% 	\vspace{-5mm}
-% 	\includegraphics[width=1.0\linewidth]{optimization_scheme.pdf}
-% 	\caption{Synthesis optimization scheme, following \cite{SchapplerJahRaaOrt2022} \TODO{aktuellen Stand aus Moritz Diss?}}
-% 	\label{fig:optimization_scheme}
-% 	\vspace{-5mm}
-% \end{figure}
-% \todo[color=green]{Nichts aus Sec2 wiederholen!}
 The robot's structural and dimensional synthesis is performed based on the idea of \cite{Krefft2006} using a general implementation, briefly summarized in \cite{Schappler2022_ARK_3T1R} with remarks the aspect of functional redundancy, relevant for 3T2R tasks.
 It provides several possible structures with specified kinematic parameters
 % We performed this according to the optimization scheme introduced in \cite{Schappler2022_ARK_3T1R} and extended in \cite{SchapplerJahRaaOrt2022}
@@ -333,6 +176,7 @@ During the synthesis, the 13--16 \emph{optimization variables} of feasible struc
 
 The \emph{reference trajectory} has to represent the workspace requirements, therefore it is composed of target positions at the edge of the workspace and random tilt angles of the tool within the specified range. 
 With regard to the \emph{constraints}, kinematics-derived criteria such as solvable inverse kinematics (IK), joint limits, self collisions and installation space are examined as well as dynamics-derived criteria like force and material stress limits. % It has to be noted that we limit the actuator torques to \SI{100}{\newton{}\metre} to sort out unfeasible solutions early.
+The constraints of the optimization parameters were chosen on the basis of the task so wide that the optimization is not unnecessarily limited by them. 
 Only static forces are considered within the synthesis, since specific dynamics of the trajectory is not defined at this stage of development.  
 % Similarly, link and platform mass are ignored, and only 
 A total platform payload of \SI{2}{\kilo\gram} is assumed next to the size-dependent link and platform mass, based on an aluminum alloy tube or plate geometry to optimize for good force transmission.
@@ -346,15 +190,6 @@ Further, five-DoF (3T2R) structures are prone to tolerance-induced clamping due 
 Thus, six-DoF PKM with revolute actuation at the base remain. %is reduced by presumptions, such as higher vulnerability of linear drives to vibrations and dirt, thus excluded.
 Due to technical realization and higher robustness against collisions, only structures with three or four joints are regarded. 
 The remaining structures are various implementations of 6-\underline{R}RRS, 6-\underline{R}US, 6-\underline{R}URU, 6-\underline{R}UUR and 6-\underline{R}RUU-structures, following the terminology in \cite{Merlet2006} and shown in Fig.~\ref{fig:robots}. 
-% Nur, wenn am Ende noch Platz..
-% \begin{figure}[bt] 
-% 	\centering
-% 	\vspace{-5mm}
-% 	\includegraphics[width=1.0\linewidth]{figures/kinematic_structures.pdf}
-% 	\caption{Kinematic sketches of the considered structures and our realized solution}
-% 	\label{fig:kinematic_structures}
-% 	\vspace{-5mm}
-% \end{figure}
 % 
 \begin{figure}[tb]
 	\centering
@@ -387,22 +222,6 @@ The error is based on the assumption of a joint angle resolution of \SI{7}{\arcs
 The qualitative plot shows that a wide range of platform rotations with homogenous performance is achieved by the chosen design.
 Invalid areas due to collisions and singularities are marked, as well as the mentioned platform limits. 
 It can be seen that the trajectory regards the limits in this post-processing, so the solution's reliability is sufficient.
-% not in synthesis optimization, where these were not included. 
-% 
-% \begin{figure}[tb]
-% 	\centering
-% 	\includegraphics{pareto_all.pdf}
-% 	\caption{Pareto fronts regarding two criteria, respectively.}
-% 	\label{fig:pareto}
-% \end{figure}
-
-% \begin{figure}[tb]
-%     \centering
-%     \includegraphics{perfmap.pdf}
-%     \caption{performance map}
-%     \label{fig:perfmap}
-% \end{figure}
-% 
 \begin{figure}[tb]
 	\centering
 	\vspace{-5mm}
@@ -413,48 +232,7 @@ It can be seen that the trajectory regards the limits in this post-processing, s
 	\label{fig:synthesis_results}
 	\vspace{-5mm}
 \end{figure}
-% 
-% 
-% 
-%%%%%%%% Notizen
-% Anforderungen nicht wiederholen!
 
-% - translate technical requirements into mathematical problem\\
-% - optimization scheme\\
-% - generate reference trajectory\\
-% - target criterions\\
-%     * low drive torques:\\
-%         ** sets costs\\
-%         ** low gear ratio, less friction\\
-%     * minimal collision distance:\\
-%         ** robustness of the kinemtics against self-collisions even with parameter deviations\\
-% - constraints:\\
-%     * only revolute actuation at the base (assumption: more robust against vibrations and dirt)\\
-%     * actuator torque at max 100Nm (sort out infeasible solutions early)\\
-%     * only regard structures with 3 or 4 joints due to technical realization\\
-%     * only static forces considered within the synthesis (real reason: gradient IK lead to high oscillations; reason for paper: specific dynamics of the trajectory not possible to predict, computed online. \todo{does this contradict the assumption of a reference trajectory? Use ref. traj. only for kinematics, e.g. joint ranges?}\\
-%     * link and platform mass are ignored and only extra payload of \SI{3}{\kilo\gram} is assumed to optimize for good force transmission\\
-% - optimization variables:\\
-%     * base position: range \dots \\
-%     * platform position: range \SI{50}{\milli\metre} to \SI{200}{\milli\metre} (reason)\\
-%     * kinematics parameters of the legs: DH parameters, give range of number of parameters for all structures (RUS, RUUR, ...)\\
-% - multiple iterations\\
-% - selection of final structure\\
-
-% figures:\\
-% - redundancy chart\\
-%   * based on reference design (from construction) and reference trajectory from synthesis\\
-%   * platform rotation limits are included with constant values \todo{update with variable limits}. Trajectory regards the limits (not in synthesis optimization, only in post-processing)
-% - pareto diagramm: our hexa vs. all other structures\\
-%   * Use optimization with dynamic programming for trajectory IK (avoid oscillations from gradient-projection IK)\\
-%   * use only static forces for figure. Reference design was created based on static forces only, since at that time the DP IK was not available and gradient-IK led to oscillations\todo{better explanation}\\
-%   * masses of leg chains were not considered and only mass of tool on platform\\
-%   * the symbol for our engineering solution is based on the DP trajectory within the platform limits of \SI{-20}{\degree} to \SI{+36}{\degree} around \SI{-52}{\degree}. The other markers (from the dimensional synthesis) don't have restrictions on the platform rotation (other than induced by the constraints). Further, other criteria were used for the design (e.g. collision bodies of the motors). This may explain the non-optimality of the engineering solutions against the RUS markers\\
-%   * the markers may vary according to the IK solution that is selected. Therefore only a qualitative proposition can be taken from the figure
-%  
-%  
-% \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Design}\label{sec:design}
 %
 % Insgesamt kürzen. Hauptaussagen: 
@@ -526,27 +304,8 @@ Furthermore, the geometry of the guiding rods were determined by the internal fo
 % Those attributes were then included in the synthesis functions to determine more precise performance properties. 
 %During the assembly, the masses of the individual components were measured in order to use them for the calculation of the inverse dynamic in the control system, prior dynamic parameter identification.
 The realization results in a moving mass of approximately \SI{16}{\kilo\gram} excluding the tool.
-The maximum static payload is restricted by the selected motor-gearbox combination and is calculated to $m_\text{max} = 13 \,\si{\kilo\gram}$.
-%\todo[inline]{Was ich hier noch vermisse sind konkrete Angaben zu Kaufteilen wie Antrieben und Gelenken. Besonders die maximal möglichen Gelenkmomente und -geschwindigkeiten der Motor-Getriebe-Kombinationen. Dann kann man auch abschätzen, dass es (hoffentlich) einen guten Sicherheitsfaktor gegenüber der Simulation gibt, wo ja für die 1,5kg Traglast mit statisch 2kg gerechnet wurde, also 25\% Reserve. Oder halt in der ersten Version mit 3kg Traglast statisch ohne Berücksichtigung der Segmentmassen}
+The maximum static payload is restricted by the selected motor-gearbox combination and is calculated to $m_\text{max} = 8 \,\si{\kilo\gram}$ with respect to the workspace within the relevant installation space.
 
-%% Kauteile
-% - Beckhoff Motor + Getriebe: Beckhoff am8141-xN11-xxxx-ag3400-npt025s-mf2-i-0e1-f4
-%   - M_max = 
-% - Gelenk IGUS_KARM_S08_J_EK
-
-% Comparable to the \textsc{Hexa} robot, the coupling points at the base are pairwise aligned, whereas at the mobile platform they are evenly distributed over the circle. 
-% The angled arrangement of the upper arms and the position of the elbows above the base and pointing inward instead are novel. Both features are not found in existing structures, where these are located below the basis and pointing outwards. 
-
-%
-% - concept: open base plate, rod kinematics, cage\\
-% - challenges: assembly space, joint angle ranges, design of elbow joints, size and costs of actuators, % avoiding self collisions\\
-%   * mounting orientation was "optimized" for low tilt angle\\
-% - feedback towards synthesis:\\
-%    * restricting set of structures (restricting number of links/joints)\\
-%    * after rough drive dimensioning: adding additional collision bodies representing real components\\
-%    * more precise inertia properties\\
-% - Vergleich unserer Lösung mit HEXA-Roboter in der Literatur. Fokus auf Alleinstellungsmerkmal (Oberarme gewinkelt, nach oben gerichtet)\\
-% \newpage
 \section{Workspace Characteristics}\label{sec:performance}
 \begin{figure}[tb] 
 	\centering
@@ -556,7 +315,7 @@ The maximum static payload is restricted by the selected motor-gearbox combinati
 	\label{fig:workspace}
 	\vspace{-5mm}
 \end{figure}
-Given the final design, further evaluations of \emph{workspace characteristics} are provided, which are out the scope of the dimensional synthesis due to their high computational effort. 
+Given the final design, further evaluations of \emph{workspace characteristics} are provided, which are out the scope of the dimensional synthesis in Sec.~\ref{sec:synthesis} due to their high computational effort. 
 Still, the workspace is important for the application since the reference trajectory does not guarantee a gapless workspace. %, a workspace analysis was performed, using the kinematics model. 
 In addition to the kinematic limits themselves, the workspace also suffers from truncation due to inherent collision, installation space and joint angle limits, where the spherical joint's tilt angles are dominant. 
 The workspace is calculated specifying a fixed platform tilting angle (by using $\varphi_x$ and $\varphi_y$ from  intrinsic $X$-$Y$-$Z$ Cardan angles). 
@@ -574,27 +333,8 @@ The remaining volume amounts \SI{0.205}{\cubic\metre} ($\varphi_y = \SI{0}{\degr
 % Although there is a loss of volume in the peripheral area in radial direction, this meets the requirements of the process and is therefore suitable for the intended purpose. 
 Although there is a loss of volume in the peripheral area (radial direction), this meets the requirements of the weed control process. Therefore the kinematic is suitable for the intended purpose. 
 
-%%% Notizen
-% - workspace\\
-%     * constant pointing direction\\
-%     * additional restriction due to real components: igus u-joints\\
-% - 2 plots:\\
-%     * unbeschränkter (Bauraum/u-joints) + beschränkt\\
-%     * ggf. zusätzlich mit 10/20° Kippwinkel\\
-%     * Trajektorie rein?\\
-% 	* ggf. Quader rein?\\
-% 		* für Bauraum\\
-% 		* großer Teil des Arbeitsraum gar nicht für Anwendung und Synthese relevant\\
-% - singularities\\
-% - compare with standard Hexa (-> synthesis)\\
-
-
 \section{Conclusion}
-As a result of synthesis and design of parallel kinematics for weeding, a novel variant of the well-known \textsc{Hexa} robot is presented. The special characteristic consists in inclined cranks and the configuration with elbows directed inwards, which allows a compact design. The workspace characteristics examined are suitable for the intended weeding application and benefits are also promising for other applications with similar requirements. 
-%
-% - neue variante des Hexa\\
-% - nach innen geneigte Ellenbogenkonfigration\\
-% - Leistungsmerkmale (gut), geeignet\\
+The synthesis and design of a six-DoF parallel robot was presented in this paper, with a variety of structures being tested. As a result a particularly compact variant of the well-known \textsc{HEXA} robot was implemented. Task redundancy was already considered within synthesis and using this, the effective avoidance of singularities has been demonstrated. The workspace characteristics examined are suitable for the intended weeding application. 
 %
 \section*{Acknowledgement}
 The project is supported by funds of the Federal Ministry of Food and Agriculture (BMEL) under grant number 2818812B19. 

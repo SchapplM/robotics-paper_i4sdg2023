@@ -24,13 +24,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="11.313709"
-     inkscape:cx="61.297316"
-     inkscape:cy="123.34593"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="790"
+     inkscape:zoom="8.0000004"
+     inkscape:cx="63.187497"
+     inkscape:cy="102.9375"
+     inkscape:window-width="2560"
+     inkscape:window-height="1361"
+     inkscape:window-x="1911"
+     inkscape:window-y="455"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-global="false" />
@@ -7952,7 +7952,7 @@
          id="tspan9385-7-4-4"
          style="stroke-width:0.264583"
          x="27.271044"
-         y="21.412037">kinematic</tspan></text>
+         y="21.412037">mechanism</tspan></text>
     <path
        d="m 62.437001,9.5688695 5.39157,3.1125195"
        style="fill:none;stroke:#ff0000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:22.9256;stroke-dasharray:none;stroke-opacity:1"
